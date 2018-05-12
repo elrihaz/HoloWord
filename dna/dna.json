@@ -7,23 +7,17 @@
         "language": "en"
     },
     "PropertiesSchemaFile": "properties_schema.json",
-    "BasedOn": {
-        "H": null
-    },
     "RequiresVersion": 24,
     "DHTConfig": {
         "HashType": "sha2-256",
         "NeighborhoodSize": 0
     },
-    "Progenitor": {
-        "Identity": "",
-        "PubKey": null
-    },
+
     "Zomes": [
         {
-            "Name": "sampleZome",
-            "Description": "provide a sample zome",
-            "CodeFile": "sampleZome.js",
+            "Name": "readerWriter",
+            "Description": "read and write data",
+            "CodeFile": "readerWriter.js",
             "RibosomeType": "js",
             "BridgeFuncs": null,
             "Config": null,

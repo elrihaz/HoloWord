@@ -1,4 +1,5 @@
 {
+    // proprietes generales de l'app
     "Version": 1,
     "UUID": "9097a969-55cb-11e8-afc5-10c37b6de7d9",
     "Name": "HoloWorld",
@@ -13,40 +14,45 @@
         "NeighborhoodSize": 0
     },
 
+    // les zomes: fonctionnalites de l'app
     "Zomes": [
+        // zome ***readerWriter***
         {
+            // proprietes generales du zome
             "Name": "readerWriter",
             "Description": "read and write data",
-            "CodeFile": "readerWriter.js",
+            "CodeFile": "readerWriter.js", // fichier de code
             "RibosomeType": "js",
             "BridgeFuncs": null,
             "Config": null,
+
+            // format des donnes
             "Entries": [
+
+                // chaîne de texte
                 {
-                    "Name": "sampleEntry",
-                    "DataFormat": "json",
-                    "Schema": "",
-                    "SchemaFile": "sampleEntry.json",
-                    "Sharing": "public"
+                    "Name": "holoText",
+                    "DataFormat": "string",
+                    "Sharing": "private"
                 }
             ],
+
+            // les fonctions
             "Functions": [
+
+                // Ecriture
                 {
-                    "Name": "sampleEntryCreate",
-                    "CallingType": "json",
-                    "Exposure": "public"
+                    "Name": "holoTextWrite",
+                    "CallingType": "string"
                 },
+
+                // Lecture
                 {
-                    "Name": "sampleEntryRead",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "doSampleAction",
-                    "CallingType": "json",
-                    "Exposure": "public"
+                    "Name": "holoTextRead",
+                    "CallingType": "string"
                 }
             ]
-        }
-    ]
+        } // fin zome ***readerWriter***
+
+    ] // fin des zomes
 }

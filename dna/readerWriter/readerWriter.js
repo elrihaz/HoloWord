@@ -3,8 +3,13 @@ function genesis() {
     return true
 }
 
-// ***validateCommit()*** fonction indispensable si on fait un commit() pour les regles de validations de l'ecriture sur la chaîne
+// ***validateCommit()*** fonction indispensable si on fait un commit() pour les regles de validations de l'ecriture sur la chaîne locale
 function validateCommit() {
+    return true
+}
+
+// ***validatePut()*** fonction indispensable si on fait un commit() pour les regles de validations de l'ecriture sur le DHT local
+function validatePut() {
     return true
 }
 
@@ -16,8 +21,6 @@ function holoTextWrite(text) {
 
 // ***holoTextRead()***
 function holoTextRead(hash) {
-    var holoText = get(hash, {
-        Local: true
-    })
+    var holoText = get(hash)
     return holoText
 }

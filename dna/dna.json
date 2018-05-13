@@ -1,5 +1,4 @@
 {
-    // proprietes generales de l'app
     "Version": 1,
     "UUID": "9097a969-55cb-11e8-afc5-10c37b6de7d9",
     "Name": "HoloWorld",
@@ -14,45 +13,37 @@
         "NeighborhoodSize": 0
     },
 
-    // les zomes: fonctionnalites de l'app
     "Zomes": [
-        // zome ***readerWriter***
         {
-            // proprietes generales du zome
             "Name": "readerWriter",
             "Description": "read and write data",
-            "CodeFile": "readerWriter.js", // fichier de code
+            "CodeFile": "readerWriter.js",
             "RibosomeType": "js",
             "BridgeFuncs": null,
             "Config": null,
 
-            // format des donnes
             "Entries": [
 
-                // chaîne de texte
                 {
                     "Name": "holoText",
                     "DataFormat": "string",
-                    "Sharing": "private"
+                    "Sharing": "public"
                 }
             ],
 
-            // les fonctions
             "Functions": [
 
-                // Ecriture
                 {
                     "Name": "holoTextWrite",
                     "CallingType": "string"
                 },
 
-                // Lecture
                 {
                     "Name": "holoTextRead",
                     "CallingType": "string"
                 }
             ]
-        } // fin zome ***readerWriter***
+        }
 
-    ] // fin des zomes
+    ]
 }
